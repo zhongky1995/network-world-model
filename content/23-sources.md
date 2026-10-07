@@ -34,13 +34,7 @@
 
 IP地区是估计，网络与账号限制需要多条证据。没有统一的“纯净IP”信任保证，也没有完全匿名的VPN承诺。
 
-## 这一版经过哪些检查
-
-本版检查正文对应关系、来源与边界、虚构示范中的动作观察与恢复，以及本地阅读器的显示、搜索与链接。编辑推演用改变条件后的例子检查解释是否自洽；尚未开展真实读者学习效果研究。
-
-没有实际改变你的网络设置，没有验证你的VPN供应商，也没有诊断某个平台对你的账号采取的具体措施。
-
-## 日常网址与浏览器行为的新增依据
+## 网址与浏览器行为参考资料
 
 - [MDN：网址结构](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)与[URI语法](https://www.rfc-editor.org/rfc/rfc3986.html)：组件和相对引用。资源、参数的业务含义仍由具体应用决定。
 - [HTTP语义](https://www.rfc-editor.org/rfc/rfc9110.html)：访问方式、主机与协议状态；不把协议回答等同业务成功。
@@ -49,4 +43,4 @@ IP地区是估计，网络与账号限制需要多条证据。没有统一的“
 - [片段](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Fragment)、[跳转](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections)与[主机信息](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Host)：浏览器定位、继续访问和多站点入口。
 - [QUIC规范](https://www.rfc-editor.org/rfc/rfc9000.html)：只用来解释UDP之上仍可安排恢复和保护，没有把旧TCP简化顺序说成所有网页唯一实现。
 
-所有商品站、编号、订单状态与小林经历均为虚构教学场景。它们帮助把规范与日常现象连接，不是特定平台实测；参数名也不是可复制到任意网站的操作命令。学习效果尚未经过真实零基础读者实验。
+所有商品站、编号、订单状态与小林经历均为虚构教学场景。它们帮助把规范与日常现象连接，不是特定平台实测；参数名也不是可复制到任意网站的操作命令。

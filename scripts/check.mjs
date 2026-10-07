@@ -14,6 +14,11 @@ const ids=new Set(catalog.pages.map(p=>p.id));
 assert.equal(ids.size,catalog.pages.length,'Duplicate article route');
 assert.equal(new Set(catalog.pages.map(p=>p.path)).size,ids.size,'Duplicate source path');
 assert.deepEqual(data.pages.map(p=>p.id),catalog.pages.map(p=>p.id));
+// Conversation callbacks and production reports do not belong in public lessons.
+// Generic reader address, fictional-case labels and action scopes remain valid.
+const internalVoice=/(?:你(?:说的|提到的|提出的|最初的问题)|根据你的(?:要求|反馈)|(?:本轮|这一版|本版)(?:审校|检查|经过|修改)|编辑推演|本地阅读器的显示|(?:尚未开展|尚未经过)真实(?:读者|零基础读者)(?:学习效果研究|实验))/;
+const checkReaderVoice=(text,label)=>assert.ok(!internalVoice.test(text),`Internal discussion or production wording in ${label}`);
+for(const p of data.pages)checkReaderVoice([p.title,p.summary,p.html.replace(/<[^>]*>/g,'')].join(' '),p.id);
 let images=0;
 for(const p of data.pages){
  assert.ok(p.html.length>100,`Empty article: ${p.id}`);
@@ -37,6 +42,7 @@ function collect(dir){for(const e of fs.readdirSync(path.join(root,dir),{withFil
 for(const dir of ['content','app','release'])collect(dir);
 for(const f of files){
  const s=read(f);
+ checkReaderVoice(s,f);
  assert.ok(!/\/Users\/|\/private\/var\/folders\/|C:\\Users\\|_kb-control|_task-control/.test(s),`Local production data in ${f}`);
  assert.ok(!/(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)/.test(s),`Secret-like value in ${f}`);
 }
