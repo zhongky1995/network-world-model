@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const license=fs.readFileSync(path.join(root,'LICENSE'),'utf8');
+const readerLicense=fs.readFileSync(path.join(root,'READER_LICENSE.txt'),'utf8');
+const notices=fs.readFileSync(path.join(root,'THIRD_PARTY_NOTICES.md'),'utf8');
+const source=fs.readFileSync(path.join(root,'site/index.html'),'utf8');
+const notice='<!--\nProject license, reader license and third-party notices\n'+license+'\n'+readerLicense+'\n'+notices+'\n-->\n';
+const output=source.replace('<!doctype html>','<!doctype html>\n'+notice);
+fs.mkdirSync(path.join(root,'release'),{recursive:true});
+fs.writeFileSync(path.join(root,'release/index.html'),output);
+fs.copyFileSync(path.join(root,'LICENSE'),path.join(root,'release/LICENSE'));
+console.log('Packaged self-contained reader with embedded license notices.');

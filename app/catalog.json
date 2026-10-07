@@ -1,0 +1,631 @@
+{
+  "title": "网络世界模型",
+  "groups": [
+    {
+      "id": "connection",
+      "name": "先看全局，再连起来",
+      "question": "设备、网络与应用怎样分工？"
+    },
+    {
+      "id": "address",
+      "name": "读懂地址，找到服务",
+      "question": "网址、域名、IP和端口各管什么？"
+    },
+    {
+      "id": "services",
+      "name": "一次访问，怎样成为结果",
+      "question": "页面、消息、订单和通话如何连续工作？"
+    },
+    {
+      "id": "trust",
+      "name": "保护、识别与风控",
+      "question": "谁能看见，谁在判断你？"
+    },
+    {
+      "id": "vpn",
+      "name": "换一条路径：VPN与代理",
+      "question": "连接成功后，哪些访问真的改变了？"
+    },
+    {
+      "id": "scenes",
+      "name": "把生活中的问题串起来",
+      "question": "排障、远程和发布如何回到完整流程？"
+    }
+  ],
+  "pages": [
+    {
+      "id": "world-map",
+      "path": "content/00-world-map.md",
+      "title": "从一次上网出发，建立完整的网络地图",
+      "group": "orientation",
+      "question": "一次上网里，各环节怎样连接？",
+      "summary": "用点链接、登录、提交、换网和VPN串起整个网络世界。",
+      "number": 0,
+      "terms": [
+        "互联网",
+        "通信"
+      ],
+      "related": [
+        "boundaries",
+        "url",
+        "browsing",
+        "transactions",
+        "setup"
+      ]
+    },
+    {
+      "id": "boundaries",
+      "path": "content/30-boundaries.md",
+      "title": "网络、互联网、网页和软件，分别是什么？",
+      "group": "connection",
+      "question": "网络、互联网、网页和软件，分别是什么？",
+      "summary": "从浏览器发请求、网络转送，到网站核对账号并回复，看清打开网页需要哪些部分。",
+      "number": 1,
+      "terms": [
+        "网络",
+        "网页",
+        "网站",
+        "浏览器"
+      ],
+      "related": []
+    },
+    {
+      "id": "url",
+      "path": "content/24-url.md",
+      "title": "一条网址里的域名、端口和参数，各有什么用？",
+      "group": "address",
+      "question": "一条网址里的域名、端口和参数，各有什么用？",
+      "summary": "用一条商品链接看网站名称、端口、路径、问号和井号分别有什么用。",
+      "number": 2,
+      "terms": [
+        "URL",
+        "网址",
+        "查询参数",
+        "片段"
+      ],
+      "related": [
+        "boundaries"
+      ]
+    },
+    {
+      "id": "signals",
+      "path": "content/01-signals.md",
+      "title": "文字和声音，怎么进入电线与空气？",
+      "group": "connection",
+      "question": "文字和声音，怎么进入电线与空气？",
+      "summary": "内容先变成数字记录，再借电、光或无线电信号传递。",
+      "number": 3,
+      "terms": [
+        "编码",
+        "信号",
+        "光纤"
+      ],
+      "related": [
+        "ip",
+        "security",
+        "access",
+        "packets"
+      ]
+    },
+    {
+      "id": "access",
+      "path": "content/02-access.md",
+      "title": "连上Wi-Fi，为什么不一定能上网？",
+      "group": "connection",
+      "question": "连上Wi-Fi，为什么不一定能上网？",
+      "summary": "附近连接与接入互联网是分开的几段。",
+      "number": 4,
+      "terms": [
+        "Wi-Fi",
+        "基站",
+        "运营商"
+      ],
+      "related": [
+        "signals",
+        "troubleshoot",
+        "nat",
+        "identity"
+      ]
+    },
+    {
+      "id": "packets",
+      "path": "content/03-packets.md",
+      "title": "一张照片为什么要分成许多小份？",
+      "group": "connection",
+      "question": "一张照片为什么要分成许多小份？",
+      "summary": "信息分成小份共享链路，接收端按规则恢复应用需要的内容。",
+      "number": 5,
+      "terms": [
+        "数据包",
+        "协议"
+      ],
+      "related": [
+        "signals",
+        "delivery",
+        "speed"
+      ]
+    },
+    {
+      "id": "ip",
+      "path": "content/04-ip.md",
+      "title": "IP是什么，为什么信息需要地址？",
+      "group": "address",
+      "question": "IP是什么，为什么信息需要地址？",
+      "summary": "IP帮助网络转送请求和回复；电脑的内网IP、网站的IP和网站看到的来源IP各不相同。",
+      "number": 6,
+      "terms": [
+        "IP",
+        "IPv4",
+        "IPv6",
+        "内网IP",
+        "公网IP"
+      ],
+      "related": [
+        "ports",
+        "nat",
+        "domains",
+        "identity",
+        "risk"
+      ]
+    },
+    {
+      "id": "ports",
+      "path": "content/25-ports.md",
+      "title": "知道IP后，为什么还要写端口？",
+      "group": "address",
+      "question": "知道IP后，为什么还要写端口？",
+      "summary": "同一设备可以运行多个程序，端口帮助区分通信交给哪个程序或连接。",
+      "number": 7,
+      "terms": [
+        "端口",
+        "监听",
+        "默认端口"
+      ],
+      "related": [
+        "ip"
+      ]
+    },
+    {
+      "id": "nat",
+      "path": "content/05-nat.md",
+      "title": "电脑的IP与网站看到的IP，为什么不一样？",
+      "group": "address",
+      "question": "电脑的IP与网站看到的IP，为什么不一样？",
+      "summary": "路由器转换对外使用的地址，并记录哪台设备发出了请求，把回复送回去。",
+      "number": 8,
+      "terms": [
+        "NAT",
+        "共享IP",
+        "动态IP",
+        "静态IP"
+      ],
+      "related": [
+        "ip",
+        "remote",
+        "deploy",
+        "identity",
+        "risk"
+      ]
+    },
+    {
+      "id": "domains",
+      "path": "content/26-domains.md",
+      "title": "www、shop、api：同一个网站为何有多个域名？",
+      "group": "address",
+      "question": "www、shop、api：同一个网站为何有多个域名？",
+      "summary": "www、shop、img可以在同一域名下面，却使用不同服务器或登录系统。",
+      "number": 9,
+      "terms": [
+        "子域名",
+        "二级域名",
+        "主域名",
+        "同源"
+      ],
+      "related": [
+        "url"
+      ]
+    },
+    {
+      "id": "dns",
+      "path": "content/06-dns.md",
+      "title": "输入网址后，电脑怎么找到网站？",
+      "group": "address",
+      "question": "输入网址后，电脑怎么找到网站？",
+      "summary": "名称查询先找出可联系的地址，浏览器再与服务通信。",
+      "number": 10,
+      "terms": [
+        "域名",
+        "DNS"
+      ],
+      "related": [
+        "domains",
+        "ip",
+        "browsing",
+        "troubleshoot"
+      ]
+    },
+    {
+      "id": "routes",
+      "path": "content/07-routes.md",
+      "title": "经过那么多网络，谁决定往哪走？",
+      "group": "address",
+      "question": "经过那么多网络，谁决定往哪走？",
+      "summary": "中间设备根据自己掌握的转发规则决定下一跳。",
+      "number": 11,
+      "terms": [
+        "路由",
+        "路由器",
+        "网关"
+      ],
+      "related": [
+        "ip",
+        "vpn",
+        "speed"
+      ]
+    },
+    {
+      "id": "delivery",
+      "path": "content/08-delivery.md",
+      "title": "信息丢了、乱序了，怎么还能完整收到？",
+      "group": "services",
+      "question": "信息丢了、乱序了，怎么还能完整收到？",
+      "summary": "发送端与接收端补发丢失数据、处理顺序；收到数据还不等于网站完成操作。",
+      "number": 12,
+      "terms": [
+        "TCP",
+        "UDP",
+        "重传",
+        "超时"
+      ],
+      "related": [
+        "packets",
+        "routes",
+        "messages",
+        "live"
+      ]
+    },
+    {
+      "id": "web",
+      "path": "content/09-web.md",
+      "title": "打开一个网页，背后是谁在回答？",
+      "group": "services",
+      "question": "打开一个网页，背后是谁在回答？",
+      "summary": "网站传回文字、图片和页面程序，浏览器读取并显示；按钮还可能发出新请求。",
+      "number": 13,
+      "terms": [
+        "HTTP",
+        "服务器",
+        "请求",
+        "响应",
+        "CDN"
+      ],
+      "related": [
+        "browsing",
+        "url-pages",
+        "transactions",
+        "identity"
+      ]
+    },
+    {
+      "id": "url-pages",
+      "path": "content/27-url-pages.md",
+      "title": "路径、问号、井号：不同页面究竟怎么区分？",
+      "group": "services",
+      "question": "路径、问号、井号：不同页面究竟怎么区分？",
+      "summary": "从商品、搜索、分页和章节链接区分路径、查询和片段，并理解URL之外的请求数据。",
+      "number": 14,
+      "terms": [
+        "路径",
+        "参数",
+        "锚点",
+        "请求正文"
+      ],
+      "related": [
+        "url",
+        "web"
+      ]
+    },
+    {
+      "id": "browsing",
+      "path": "content/28-browsing.md",
+      "title": "从点击商品链接到看到页面，完整经历了什么？",
+      "group": "services",
+      "question": "从点击商品链接到看到页面，完整经历了什么？",
+      "summary": "将URL、DNS、IP端口、连接、请求、页面组装和后续点击连成一次完整访问。",
+      "number": 15,
+      "terms": [
+        "重定向",
+        "页面路由"
+      ],
+      "related": [
+        "web",
+        "url-pages",
+        "domains",
+        "ports"
+      ]
+    },
+    {
+      "id": "security",
+      "path": "content/13-security.md",
+      "title": "信息经过别人，哪些内容能被看见？",
+      "group": "trust",
+      "question": "信息经过别人，哪些内容能被看见？",
+      "summary": "加密保护特定两端之间的内容，沿途仍可能观察连接线索。",
+      "number": 16,
+      "terms": [
+        "HTTPS",
+        "加密",
+        "证书"
+      ],
+      "related": [
+        "web",
+        "identity",
+        "vpn"
+      ]
+    },
+    {
+      "id": "identity",
+      "path": "content/14-identity.md",
+      "title": "换了IP，网站为什么还认得你？",
+      "group": "trust",
+      "question": "换了IP，网站为什么还认得你？",
+      "summary": "换网络以后，浏览器保存的登录标记可能还在，网站因此仍能找到同一账号。",
+      "number": 17,
+      "terms": [
+        "Cookie",
+        "会话",
+        "设备指纹"
+      ],
+      "related": [
+        "nat",
+        "security",
+        "risk",
+        "vpn"
+      ]
+    },
+    {
+      "id": "transactions",
+      "path": "content/29-transactions.md",
+      "title": "点了登录、提交订单，什么才算真的成功？",
+      "group": "services",
+      "question": "点了登录、提交订单，什么才算真的成功？",
+      "summary": "区分点按钮、请求送达、业务写入、响应到达和界面显示，不因超时重复推断成败。",
+      "number": 18,
+      "terms": [
+        "业务状态",
+        "接口",
+        "API"
+      ],
+      "related": [
+        "web",
+        "identity",
+        "delivery"
+      ]
+    },
+    {
+      "id": "messages",
+      "path": "content/10-messages.md",
+      "title": "朋友不在线，消息怎么还能送达？",
+      "group": "services",
+      "question": "朋友不在线，消息怎么还能送达？",
+      "summary": "服务器先保存消息，朋友设备恢复联网后再收取；发送、送达和已读各有含义。",
+      "number": 19,
+      "terms": [
+        "存储转发",
+        "推送",
+        "已读"
+      ],
+      "related": [
+        "web",
+        "delivery",
+        "identity"
+      ]
+    },
+    {
+      "id": "live",
+      "path": "content/11-live.md",
+      "title": "视频通话为什么比看视频更怕卡？",
+      "group": "services",
+      "question": "视频通话为什么比看视频更怕卡？",
+      "summary": "实时互动更需要及时信息，过晚到达会破坏交流。",
+      "number": 20,
+      "terms": [
+        "缓冲",
+        "中继",
+        "实时通信"
+      ],
+      "related": [
+        "delivery",
+        "speed"
+      ]
+    },
+    {
+      "id": "speed",
+      "path": "content/12-speed.md",
+      "title": "网速很高，为什么打开网页仍然慢？",
+      "group": "services",
+      "question": "网速很高，为什么打开网页仍然慢？",
+      "summary": "速度取决于容量、等待、波动以及服务处理。",
+      "number": 21,
+      "terms": [
+        "带宽",
+        "延迟",
+        "抖动",
+        "丢包"
+      ],
+      "related": [
+        "delivery",
+        "web",
+        "troubleshoot",
+        "live",
+        "routes"
+      ]
+    },
+    {
+      "id": "risk",
+      "path": "content/15-risk.md",
+      "title": "IP为什么是风控的重要线索？",
+      "group": "trust",
+      "question": "IP为什么是风控的重要线索？",
+      "summary": "IP可提供来源、区域和历史活动线索，平台还需要联合其他证据。",
+      "number": 22,
+      "terms": [
+        "IP信誉",
+        "风控",
+        "机房IP",
+        "住宅IP"
+      ],
+      "related": [
+        "identity",
+        "nat",
+        "vpn"
+      ]
+    },
+    {
+      "id": "vpn",
+      "path": "content/16-vpn.md",
+      "title": "VPN究竟改变了哪一段通信？",
+      "group": "vpn",
+      "question": "VPN究竟改变了哪一段通信？",
+      "summary": "VPN建立受保护的连接，让选定流量经另一端访问资源。",
+      "number": 23,
+      "terms": [
+        "VPN",
+        "隧道",
+        "出口节点"
+      ],
+      "related": [
+        "routes",
+        "security",
+        "split",
+        "setup",
+        "remote"
+      ]
+    },
+    {
+      "id": "split",
+      "path": "content/17-split.md",
+      "title": "全局、分流、代理，为什么影响的应用不同？",
+      "group": "vpn",
+      "question": "全局、分流、代理，为什么影响的应用不同？",
+      "summary": "规则决定哪些请求直达、哪些经过中间节点。",
+      "number": 24,
+      "terms": [
+        "代理",
+        "分流",
+        "全局模式",
+        "节点"
+      ],
+      "related": [
+        "vpn",
+        "setup",
+        "identity"
+      ]
+    },
+    {
+      "id": "setup",
+      "path": "content/18-setup.md",
+      "title": "怎样配置VPN，并确认它真的生效？",
+      "group": "vpn",
+      "question": "怎样配置VPN，并确认它真的生效？",
+      "summary": "先确认目的和提供者，再导入或填写配置，按目标验证并保留恢复路径。",
+      "number": 25,
+      "terms": [
+        "VPN配置",
+        "连接验证"
+      ],
+      "related": [
+        "split",
+        "dns",
+        "vpn",
+        "troubleshoot"
+      ]
+    },
+    {
+      "id": "troubleshoot",
+      "path": "content/19-troubleshoot.md",
+      "title": "连不上、打不开，怎样判断卡在哪一段？",
+      "group": "scenes",
+      "question": "连不上、打不开，怎样判断卡在哪一段？",
+      "summary": "用少量对照缩小故障范围，一次只改变一个条件。",
+      "number": 26,
+      "terms": [
+        "排障",
+        "热点"
+      ],
+      "related": [
+        "dns",
+        "split",
+        "setup",
+        "risk"
+      ]
+    },
+    {
+      "id": "remote",
+      "path": "content/20-remote.md",
+      "title": "人在外面，怎样访问家里或公司的设备？",
+      "group": "scenes",
+      "question": "人在外面，怎样访问家里或公司的设备？",
+      "summary": "先让设备加入有身份控制的私有连接，再访问获准的服务。",
+      "number": 27,
+      "terms": [
+        "远程访问",
+        "内网"
+      ],
+      "related": [
+        "vpn",
+        "identity",
+        "setup"
+      ]
+    },
+    {
+      "id": "deploy",
+      "path": "content/21-deploy.md",
+      "title": "电脑里的网页，怎样让别人也能打开？",
+      "group": "scenes",
+      "question": "电脑里的网页，怎样让别人也能打开？",
+      "summary": "别人能打开网页，需要网络能够连接服务器，程序正在运行，并且允许外部请求。",
+      "number": 28,
+      "terms": [
+        "localhost",
+        "端口",
+        "防火墙",
+        "部署"
+      ],
+      "related": [
+        "ports",
+        "domains",
+        "remote",
+        "web"
+      ]
+    },
+    {
+      "id": "glossary",
+      "path": "content/22-glossary.md",
+      "title": "遇到陌生名词，来这里查一句解释",
+      "group": "reference",
+      "question": "遇到陌生名词，来这里查一句解释",
+      "summary": "索引将常见名称连接到唯一的正文解释。",
+      "number": 29,
+      "terms": [],
+      "related": [
+        "world-map",
+        "signals",
+        "access",
+        "packets",
+        "ip"
+      ]
+    },
+    {
+      "id": "sources",
+      "path": "content/23-sources.md",
+      "title": "想核对原理，去哪里看？",
+      "group": "reference",
+      "question": "想核对原理，去哪里看？",
+      "summary": "一手资料支持机制，虚构案例与编辑判断有明确边界。",
+      "number": 30,
+      "terms": [],
+      "related": []
+    }
+  ]
+}

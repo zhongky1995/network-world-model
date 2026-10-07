@@ -1,0 +1,22 @@
+{
+  "name": "network-world-model",
+  "version": "1.0.0",
+  "private": true,
+  "description": "面向零基础读者的网络通信知识库与离线阅读器",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/package.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "marked": "17.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhongky1995/network-world-model.git"
+  }
+}
