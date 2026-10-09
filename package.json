@@ -10,7 +10,8 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs && node scripts/package.mjs",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
     "marked": "17.0.5"

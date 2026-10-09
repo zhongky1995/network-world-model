@@ -9,6 +9,7 @@ const html=read('release/index.html');
 const match=html.match(/<script id="knowledge-data" type="application\/json">([\s\S]*?)<\/script>/);
 assert.ok(match,'The reader must embed its content');
 assert.ok(!html.includes('__PAYLOAD__'),'Unreplaced build placeholder');
+assert.ok(!/__ANALYTICS_(?:CONFIG|RUNTIME)__/.test(html),'Analytics was not embedded');
 const data=JSON.parse(match[1]);
 const ids=new Set(catalog.pages.map(p=>p.id));
 assert.equal(ids.size,catalog.pages.length,'Duplicate article route');
